@@ -67,6 +67,12 @@
         padding-top: 40px;
       }
 
+      h1 {
+        font-size: 3em;
+        text-align: center;
+        margin-bottom: 0;
+      }
+
       .youtube-video-container {
         border-radius: 3px;
         box-shadow: 0 1px 3px rgba(0,0,0,0.5);
@@ -131,7 +137,9 @@
   <body>
     <div class="wrapper">
 
-      <!--<div class="youtube-video-container"></div>-->
+      <h1>Youtube video cropper</h1>
+
+      <div class="youtube-video-container"></div>
 
       <form class="youtube-video-cropper" action="" method="GET">
 
@@ -171,7 +179,7 @@
             $video.id = $video.val().match(regex)[1];
             $video.embed_url = convert_to_embed($video.id);
 
-            $('.wrapper').prepend("<div class=\"youtube-video-container\">"+$video.embed_url+"</div>");
+            $('.youtube-video-container').prepend($video.embed_url);
           }
         });
 
