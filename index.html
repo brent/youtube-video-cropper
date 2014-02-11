@@ -137,7 +137,7 @@
   <body>
     <div class="wrapper">
 
-      <h1>Youtube video cropper</h1>
+      <!--<h1>Youtube video cropper</h1>-->
 
       <div class="youtube-video-container"></div>
 
@@ -159,35 +159,6 @@
     </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script>
-      $(document).ready(function() {
-
-        var convert_to_embed = function(video_id) {
-          var width = 560,
-              height = 315,
-              embed_url = "<iframe width=\""+width+"\" height=\""+height+"\" src=\"http\:\/\/www.youtube.com/embed/"+video_id+"\" frameborder=\"0\" allowfullscreen></iframe>";
-
-          return embed_url;
-        };
-
-        var regex = /watch\?v=(\w*)/;
-
-        $('.youtube-url input').blur(function() {
-          var $video = $(this);
-          if($video.val() != "") {
-            $('.youtube-video-container').empty();
-            $video.id = $video.val().match(regex)[1];
-            $video.embed_url = convert_to_embed($video.id);
-
-            $('.youtube-video-container').prepend($video.embed_url);
-          }
-        });
-
-        $('.youtube-video-cropper').submit(function(e) {
-          e.preventDefault();
-        });
-
-      });
-    </script>
+    <script src="js/main.js"></script>
   </body>
 </html>
