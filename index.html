@@ -81,7 +81,7 @@
         width: 560px;
       }
 
-      .youtube-video-cropper {
+      .youtube-video-cropper, .cropped-urls {
         background: #fff;
         border-radius: 3px;
         box-shadow: 0 1px 5px rgba(0,0,0,0.25);
@@ -131,6 +131,27 @@
         width: 100%;
       }
 
+      .cropped-urls {
+        display: none;
+      }
+
+      .cropped-urls li {
+        margin-bottom: 10px;
+      }
+
+      .cropped-urls li a {
+        color: #999;
+      }
+
+      .clear-cropped-urls {
+        background: #bbb;
+        border-radius: 3px;
+        color: #fff;
+        display: block;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+      }
 
     </style>
   </head>
@@ -148,13 +169,18 @@
         </fieldset>
 
         <fieldset class="youtube-video-times">
-          <input class="youtube-video-start" type="text" name="youtube-video-start" placeholder="start time" />
-          <input class="youtube-video-end" type="text" name="youtube-video-end" placeholder="end time" />
+          <input class="youtube-video-start" type="text" name="youtube-video-start" placeholder="start time (mm:ss)" />
+          <input class="youtube-video-end" type="text" name="youtube-video-end" placeholder="end time (mm:ss)" />
         </fieldset>
 
         <button class="cta" type="submit">Generate clip</button>
 
       </form>
+
+      <div class="cropped-urls">
+        <ul></ul>
+        <a class="clear-cropped-urls" href="#">clear</a>
+      </div>
 
     </div>
 
