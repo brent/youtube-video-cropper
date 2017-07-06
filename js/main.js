@@ -16,7 +16,8 @@ $(document).ready(function() {
   },
 
   generate_cropped_url = function(video_id, start, end) {
-    var url = "http://youtube.googleapis.com/v/"+video_id+"?start="+start+"&end="+end+"&version=3";
+    //var url = "http://youtube.googleapis.com/v/"+video_id+"?start="+start+"&end="+end+"&version=3";
+    var url = "http://youtube.com/embed/"+video_id+"?start="+start+"&end="+end+"&autoplay=true";
 
     return url;
   },
